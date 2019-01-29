@@ -1,13 +1,13 @@
-var React = require('react');
-var ReactRouter = require('react-router-dom');
-var Router = ReactRouter.BrowserRouter;
-var Route = ReactRouter.Route;
-var Switch = ReactRouter.Switch;
-var Popular = require('./Popular');
-var Home = require('../components/Home');
-var Battle = require('../components/Battle');
-var Nav = require('../components/Nav');
-var Results = require('../components/Results');
+const React = require('react');
+const ReactRouter = require('react-router-dom');
+const Router = ReactRouter.BrowserRouter;
+const Route = ReactRouter.Route;
+const Switch = ReactRouter.Switch;
+const Popular = require('./Popular');
+const Home = require('../components/Home');
+const Battle = require('../components/Battle');
+const Nav = require('../components/Nav');
+const Results = require('../components/Results');
 
 
 class App extends React.Component {
@@ -21,9 +21,7 @@ class App extends React.Component {
 						<Route exact path='/battle' component={Battle} />
 						<Route path='/battle/results' component={Results} />
 						<Route path='/popular' component={Popular} />
-						<Route render={function(){
-							return <p>Page not found 404</p>
-						}} />
+						<Route render={() => <p>Page not found 404</p>} />
 					</Switch>
 				</div>
 			</Router>
